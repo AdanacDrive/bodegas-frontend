@@ -3,10 +3,13 @@
 
   <div class="row">
     <div class="col-md-4 mb-4">
-      <app-bodega-form (registrada)="tabla.cargar()" />
+      <app-bodega-form (registrada)="cargar()" />
     </div>
     <div class="col-md-8">
-      <app-producto-tabla #tabla />
+      @if (error()) {
+        <div class="alert alert-danger">{{ error() }}</div>
+      }
+      <app-producto-tabla [bodegas]="bodegas()" />
     </div>
   </div>
 </div>

@@ -1,9 +1,5 @@
 <h5>Productos</h5>
 
-@if (error()) {
-  <div class="alert alert-danger">{{ error() }}</div>
-}
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -14,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (b of bodegas(); track b.id) {
+    @for (b of bodegas; track b.id) {
       @for (p of b.productos; track p.id) {
         <tr>
           <td>{{ p.nombre }}</td>

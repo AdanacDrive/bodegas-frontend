@@ -36,4 +36,4 @@ src/app
     producto-tabla   tabla de productos con su bodega
 ```
 
-Cuando se registra una bodega, el formulario avisa con un `@Output` y la tabla vuelve a consultar el backend.
+`AppComponent` consulta el backend y le pasa las bodegas a la tabla con `@Input`. Cuando se registra una bodega, el formulario avisa con un `@Output` y `AppComponent` vuelve a consultar.
