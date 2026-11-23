@@ -1,0 +1,12 @@
+<div class="container py-4">
+  <h1 class="mb-4">Bodegas</h1>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <app-bodega-form (registrada)="tabla.cargar()" />
+    </div>
+    <div class="col-md-8">
+      <app-producto-tabla #tabla />
+    </div>
+  </div>
+</div>
