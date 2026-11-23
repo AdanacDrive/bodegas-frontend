@@ -19,6 +19,14 @@
           <td>{{ b.nombre }}</td>
         </tr>
       }
+      @if (b.productos.length === 0) {
+        <tr>
+          <td>Sin productos</td>
+          <td>0</td>
+          <td>0</td>
+          <td>{{ b.nombre }}</td>
+        </tr>
+      }
     }
   </tbody>
 </table>
